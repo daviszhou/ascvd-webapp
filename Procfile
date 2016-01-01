@@ -1,1 +1,1 @@
-web: python ascvd-web/hello.py
+web: python ascvd-web/__init__.py
