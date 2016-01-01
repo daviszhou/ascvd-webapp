@@ -3,9 +3,21 @@
 </head>
 
 <body class = "body">
+
 	<body>
-	<h3>Title</h3>
-	<p>This is a sentence.<p>
+
+		<h3>{{ title }}</h3>
+
+		{% for p in paragraph %}
+		<p>{{ p }}<p>
+		{% endfor %}
+
+		{% if page_type == 'about' %}
+		<p>Contact Box</p>
+		{% else %}
+		<p>Is not the about page</p>
+		{% endif %}
 	</body>
+
 </body>
 </html>
