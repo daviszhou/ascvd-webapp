@@ -5,18 +5,18 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
 
-	page_type = 'clinician'
+	viewer = 'clinician'
 	description = 'This is the clinician version.'
 
-	return render_template('index.html', description=description)
+	return render_template('index.html', viewer=viewer, description=description)
 
 @app.route('/patient')
 def patientpage():
 
-	page_type = 'patient'
+	viewer = 'patient'
 	description = 'This is the patient version.'
 
-	return render_template('index.html', description=description)
+	return render_template('index.html', viewer=viewer, description=description)
 
 if __name__ == '__main__':
 	port = int(os.environ.get('PORT', 5010))
