@@ -1,5 +1,13 @@
 body { background: #f4f4f4; }
 
+.navbar {
+	margin-bottom: 0px;
+}
+.navbar-text {
+	font-size: 18px;
+	text-align: center;
+}
+
 .btn-group {
 	display: inline-block;
 }
