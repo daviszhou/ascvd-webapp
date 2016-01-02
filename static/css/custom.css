@@ -1,11 +1,12 @@
 body { background: #f4f4f4; }
 
-.navbar {
-	margin-bottom: 0px;
-}
+
 .navbar-text {
 	font-size: 18px;
 	text-align: center;
+}
+.navbar {
+	margin-bottom: 0px;
 }
 
 .btn-toolbar.spaced-bar {
