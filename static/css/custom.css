@@ -8,6 +8,14 @@ body { background: #f4f4f4; }
 	text-align: center;
 }
 
+.btn-toolbar.spaced-bar {
+	height: 60px;
+}
 .btn-group {
 	display: inline-block;
+}
+.btn-group.text {
+	margin-top: 5px;
+	font-size: 16px;
+	width: 110px;
 }
