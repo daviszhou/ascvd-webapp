@@ -67,7 +67,7 @@
 		<div class="btn-toolbar spaced-bar">
 			<span class="btn-group text">Ethnicity</span>
 			<div class="btn-group pull-right" role="group">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">Dropdown
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">Select
 					<span class="caret"></span>
 				 </button>
 
@@ -77,6 +77,76 @@
 			      <li><a href="#">Other</a></li>
 			    </ul>
 	    	</div>
+		</div>
+
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Biological Sex</span>
+		  <span class="btn-group pull-right">
+		    <button type="button" class="btn btn-default">Man</button>
+		    <button type="button" class="btn btn-default">Woman</button>
+		  </span>
+		</div>
+
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Total Cholesterol</span>
+			<div class="btn-group pull-right">
+			    <div class="layout-slider" style="width: 100%">
+			    	<span style="display: inline-block; width: 140px; padding: 20px 5px;"><input id="Slider2" type="slider" name="age" value="180" /></span>
+			    </div>
+			    <script type="text/javascript" charset="utf-8">
+			      jQuery("#Slider2").slider({
+			        from: 130, 
+			        to: 320, 
+			        step: 5, 
+			        dimension: '',
+			        skin: 'plastic',
+			        });
+			    </script>
+			</div>
+		</div>
+
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">HDL Cholesterol</span>
+			<div class="btn-group pull-right">
+			    <div class="layout-slider" style="width: 100%">
+			    	<span style="display: inline-block; width: 140px; padding: 20px 5px;"><input id="Slider3" type="slider" name="age" value="30" /></span>
+			    </div>
+			    <script type="text/javascript" charset="utf-8">
+			      jQuery("#Slider3").slider({
+			        from: 20, 
+			        to: 100,
+			        step: 5, 
+			        dimension: '',
+			        skin: 'plastic',
+			        });
+			    </script>
+			</div>
+		</div>
+
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Systolic Blood Pressure</span>
+			<div class="btn-group pull-right">
+			    <div class="layout-slider" style="width: 100%">
+			    	<span style="display: inline-block; width: 140px; padding: 20px 5px;"><input id="Slider4" type="slider" name="age" value="50" /></span>
+			    </div>
+			    <script type="text/javascript" charset="utf-8">
+			      jQuery("#Slider4").slider({
+			        from: 90, 
+			        to: 200, 
+			        step: 5,
+			        dimension: '',
+			        skin: 'plastic',
+			        });
+			    </script>
+			</div>
+		</div>
+
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Treated for Hypertension?</span>
+		  <span class="btn-group pull-right">
+		    <button type="button" class="btn btn-default">Yes</button>
+		    <button type="button" class="btn btn-default">No</button>
+		  </span>
 		</div>
 
 		<div class="btn-toolbar spaced-bar">
