@@ -5,8 +5,8 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
 
-	title = 'Epic Tutorial'
-	paragraph = ['While the deployment is happening, you may see a syntax error during the install for gunicorn about invalid syntax for the line yield from self.wsgi.close(). That error can be ignored.', 'While the deployment is happening, you may see a syntax error during the install for gunicorn about invalid syntax for the line yield from self.wsgi.close(). That error can be ignored.']
+	title = 'Title'
+	paragraph = ['Paragraph Text']
 
 	return render_template('index.html', title=title, paragraph=paragraph)
 
@@ -14,7 +14,7 @@ def homepage():
 def aboutpage():
 
 	title = "About the site"
-	paragraph = ["While the deployment is happening, you may see a syntax error during the install for gunicorn about invalid syntax for the line yield from self.wsgi.close(). That error can be ignored.', 'While the deployment is happening, you may see a syntax error during the install for gunicorn about invalid syntax for the line yield from self.wsgi.close()."]
+	paragraph = ['Paragraph Text']
 
 	page_type = 'about'
 	return render_template('index.html', title=title, paragraph=paragraph, page_type=page_type)
