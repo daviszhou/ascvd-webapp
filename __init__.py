@@ -4,7 +4,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-
 	viewer = 'clinician'
 	description = 'This is the clinician version.'
 
