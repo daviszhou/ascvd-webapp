@@ -24,10 +24,3 @@ body {
 	font-size: 16px;
 	width: 110px;
 }
-.slider {
-	width: 150px;
-	margin-top: 10px
-}
-.slider .ui-slider-handle {
-	font-size: 1.2em;
-}

@@ -2,14 +2,18 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="/static/css/custom.css" rel="stylesheet" type="text/css">
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/flick/jquery-ui.css" rel="stylesheet" type="text/css"/>
 
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	<script src="/static/js/1.11.4/jquery-ui.js"></script>
-	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
-	<script src="../static/js/jquery.simulate.js"></script>
-	<script src="../static/js/jquery.limitslider.js"></script>
+
+	<!-- jquery slider pips-->
+	<link href="/static/css/jquery-ui-slider-pips.css" rel="stylesheet" type="text/css">
+	<script src="/static/js/jquery-ui-slider-pips.min.js"></script>
+	<!-- Done -->
 </head>
 
 <body class = "body">
@@ -40,22 +44,21 @@
 	</div>
 	{% endif %}
 
+
 <div class = "container body-container">
 	<body>
+
 		<br><!--spacing for body-->
+
 		<div class="btn-toolbar spaced-bar">
 			<span class="btn-group text">Age</span>
 			<div class="btn-group pull-right">
 				<div class="slider" id="1"></div>
 				<script>
-			    $(function() {
-		        $('.slider#1').limitslider({
-			        label:	true,
-			        value: 20,
+		        $(".slider#1").slider({
+		        	value: 20,
 			        min: 20,
 			        max: 90
-			        });
-		   		});
 				</script>
 			</div>
 		</div>
@@ -86,17 +89,16 @@
 		<div class="btn-toolbar spaced-bar">
 			<span class="btn-group text">Total Cholesterol</span>
 			<div class="btn-group pull-right">
+				<div class="slider-container">
 				<div class="slider" id="2"></div>
 				<script>
-			    $(function() {
-		        $('.slider#2').limitslider({
-			        label:	true,
-			        value: 130,
-			        min: 130,
-			        max: 320
-			        });
-		   		});
+			        $(".slider#2").slider({
+			        	value: 130,
+				        min: 130,
+				        max: 320
+			        })
 				</script>
+				</div>
 			</div>
 		</div>
 
@@ -105,14 +107,11 @@
 			<div class="btn-group pull-right">
 				<div class="slider" id="3"></div>
 				<script>
-			    $(function() {
-		        $('.slider#3').limitslider({
-			        label:	true,
-			        value: 20,
-			        min: 20,
-			        max: 100
-			        });
-		   		});
+			        $(".slider#3").slider({
+			        	value: 20,
+				        min: 20,
+				        max: 100
+			        })
 				</script>
 			</div>
 		</div>
@@ -122,14 +121,11 @@
 			<div class="btn-group pull-right">
 				<div class="slider" id="4"></div>
 				<script>
-			    $(function() {
-		        $('.slider#4').limitslider({
-			        label:	true,
-			        value: 90,
-			        min: 90,
-			        max: 200
-			        });
-		   		});
+			        $(".slider#4").slider({
+			        	value: 90,
+				        min: 90,
+				        max: 200
+			        })
 				</script>
 			</div>
 		</div>
@@ -157,7 +153,7 @@
 		    <button type="button" class="btn btn-default">No</button>
 		  </span>
 		</div>
-
+		<script>$(".slider").slider().slider("float");</script>
 		<p>{{ description }}</p>
 
 	</body>
