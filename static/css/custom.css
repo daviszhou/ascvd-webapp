@@ -1,7 +1,9 @@
 body {
 	background: #f4f4f4;
 }
-.layout { padding: 50px; font-family: Georgia, serif; }
+.layout {
+	padding: 50px;
+	font-family: Georgia, serif; }
 
 .navbar-text {
 	font-size: 18px;
