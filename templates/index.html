@@ -7,7 +7,7 @@
 
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 	<script src="/static/js/1.11.4/jquery-ui.js"></script>
-	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/sunny/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
 	<script src="../static/js/jquery.simulate.js"></script>
 	<script src="../static/js/jquery.limitslider.js"></script>
 </head>
@@ -46,14 +46,17 @@
 		<div class="btn-toolbar spaced-bar">
 			<span class="btn-group text">Age</span>
 			<div class="btn-group pull-right">
-					<div class="example-basic"></div>
-					<script>
-					    $(function() {
-				        $('.example-basic').limitslider({
-					        label:true
-					        });
-				   		});
-					</script>
+				<div class="slider" id="1"></div>
+				<script>
+			    $(function() {
+		        $('.slider#1').limitslider({
+			        label:	true,
+			        value: 20,
+			        min: 20,
+			        max: 90
+			        });
+		   		});
+				</script>
 			</div>
 		</div>
 
@@ -83,54 +86,51 @@
 		<div class="btn-toolbar spaced-bar">
 			<span class="btn-group text">Total Cholesterol</span>
 			<div class="btn-group pull-right">
-			    <div class="layout-slider" style="width: 100%">
-			    	<span style="display: inline-block; width: 140px; padding: 20px 5px;"><input id="Slider2" type="slider" name="age" value="180" /></span>
-			    </div>
-			    <script type="text/javascript" charset="utf-8">
-			      jQuery("#Slider2").slider({
-			        from: 130, 
-			        to: 320, 
-			        step: 5, 
-			        dimension: '',
-			        skin: 'plastic',
+				<div class="slider" id="2"></div>
+				<script>
+			    $(function() {
+		        $('.slider#2').limitslider({
+			        label:	true,
+			        value: 130,
+			        min: 130,
+			        max: 320
 			        });
-			    </script>
+		   		});
+				</script>
 			</div>
 		</div>
 
 		<div class="btn-toolbar spaced-bar">
 			<span class="btn-group text">HDL Cholesterol</span>
 			<div class="btn-group pull-right">
-			    <div class="layout-slider" style="width: 100%">
-			    	<span style="display: inline-block; width: 140px; padding: 20px 5px;"><input id="Slider3" type="slider" name="age" value="30" /></span>
-			    </div>
-			    <script type="text/javascript" charset="utf-8">
-			      jQuery("#Slider3").slider({
-			        from: 20, 
-			        to: 100,
-			        step: 5, 
-			        dimension: '',
-			        skin: 'plastic',
+				<div class="slider" id="3"></div>
+				<script>
+			    $(function() {
+		        $('.slider#3').limitslider({
+			        label:	true,
+			        value: 20,
+			        min: 20,
+			        max: 100
 			        });
-			    </script>
+		   		});
+				</script>
 			</div>
 		</div>
 
 		<div class="btn-toolbar spaced-bar">
 			<span class="btn-group text">Systolic Blood Pressure</span>
 			<div class="btn-group pull-right">
-			    <div class="layout-slider" style="width: 100%">
-			    	<span style="display: inline-block; width: 140px; padding: 20px 5px;"><input id="Slider4" type="slider" name="age" value="50" /></span>
-			    </div>
-			    <script type="text/javascript" charset="utf-8">
-			      jQuery("#Slider4").slider({
-			        from: 90, 
-			        to: 200, 
-			        step: 5,
-			        dimension: '',
-			        skin: 'plastic',
+				<div class="slider" id="4"></div>
+				<script>
+			    $(function() {
+		        $('.slider#4').limitslider({
+			        label:	true,
+			        value: 90,
+			        min: 90,
+			        max: 200
 			        });
-			    </script>
+		   		});
+				</script>
 			</div>
 		</div>
 
