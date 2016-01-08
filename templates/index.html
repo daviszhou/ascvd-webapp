@@ -38,35 +38,19 @@
 	</nav>
 	{% if viewer == 'clinician' %}
 	<div class="btn-group no-space btn-group-justified" role="group" aria-label="...">
-    <div class="btn-group" role="group">
-      <a href="#" class="btn btn-default active">Clinician Version</a>
-    </div>
-    <div class="btn-group" role="group">
-      <a href="/patient" class="btn btn-default">Patient Version</a>
-    </div>
-    <div class="btn-group" role="group">
-      <a href="/about" class="btn btn-default">About</a>
-    </div>
+    <a href="#" class="btn btn-default active">Clinician Version</a>
+    <a href="/patient" class="btn btn-default"> Patient Version </a>
 	</div>
 	{% elif viewer == 'patient' %}
 	<div class="btn-group no-space btn-group-justified" role="group" aria-label="...">
-    <div class="btn-group" role="group">
-      <a href="/" class="btn btn-default">Clinician Version</a>
-    </div>
-    <div class="btn-group" role="group">
-      <a href="#" class="btn btn-default active">Patient Version</a>
-    </div>
-    <div class="btn-group" role="group">
-      <a href="/about" class="btn btn-default">About</a>
-    </div>
-	</div>
+    <a href="/" class="btn btn-default">Clinician Version</a>
+    <a href="#" class="btn btn-default active"> Patient Version </a>
+  </div>
 	{% endif %}
-
 
 <div class = "container body-container">
 	<body>
 		<br><!--spacing for body-->
-
 		<div class="btn-toolbar spaced-bar">
 			<span class="btn-group text">Age</span>
 			<div class="btn-group pull-right">
@@ -181,7 +165,7 @@
 
 		<div>
 		<br>
-		<p class ="bottom-page-description">{{ description }}</p>
+		<p class ="bottom-page-description">{{ description }} <a href="/about">About this app.</p>
 		</div>
 	</body>
 </div>
