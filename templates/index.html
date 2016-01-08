@@ -44,6 +44,9 @@
     <div class="btn-group" role="group">
       <a href="/patient" class="btn btn-default">Patient Version</a>
     </div>
+    <div class="btn-group" role="group">
+      <a href="/about" class="btn btn-default">About</a>
+    </div>
 	</div>
 	{% elif viewer == 'patient' %}
 	<div class="btn-group no-space btn-group-justified" role="group" aria-label="...">
@@ -53,13 +56,15 @@
     <div class="btn-group" role="group">
       <a href="#" class="btn btn-default active">Patient Version</a>
     </div>
+    <div class="btn-group" role="group">
+      <a href="/about" class="btn btn-default">About</a>
+    </div>
 	</div>
 	{% endif %}
 
 
 <div class = "container body-container">
 	<body>
-
 		<br><!--spacing for body-->
 
 		<div class="btn-toolbar spaced-bar">
@@ -174,8 +179,10 @@
 		    </div>
 		</div>
 
+		<div>
+		<br>
 		<p class ="bottom-page-description">{{ description }}</p>
-
+		</div>
 	</body>
 </div>
 <script type = "text/javascript" src = "/static/js/bootstrap.min.js"></script>
