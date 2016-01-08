@@ -1,10 +1,31 @@
+@media (min-width: 600px) {
+	.container {
+		max-width: 600px;
+	}
+	.prompt-text {
+		font-size: 22px;
+		line-height: 50px;
+	}
+	.col-height {
+	height: 50px;
+	}
+}
+
+
+.prompt-text {
+	font-size: 16px;
+	line-height: 50px;
+}
+.col-height {
+	height: 50px;
+}
+
 body {
 	background: #f4f4f4;
 }
 .layout {
 	padding: 50px;
 	font-family: Georgia, serif; }
-
 .navbar-text {
 	font-size: 18px;
 	text-align: center;
@@ -16,17 +37,18 @@ body {
 .btn-toolbar.spaced-bar {
 	height: 60px;
 }
-.btn-group {
-	display: inline-block;
-}
-.btn-group.text {
-	margin-top: 5px;
-	font-size: 16px;
-}
 .slider {
-	width: 110px;
-	margin-top: 12px;
+	vertical-align: middle;
+	width: 100%;
 }
 .bottom-page-description {
 	text-align: center;
+}
+.vertical-center {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
+.dropdown-menu {
+	margin-right: 10px;
 }

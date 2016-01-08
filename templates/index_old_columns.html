@@ -55,49 +55,57 @@
 	<body>
 
 		<br><!--spacing for body-->
-
 	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-text">Age</div>
-      <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="1"></div>
-				<script>
-		        $(".slider#1").slider({
-		        	value: 20,
-			        min: 20,
-			        max: 100
-			    })
-				</script>
-      </div>
+	    <div class="row-height">
+
+	      <div class="col-xs-7 col-height">
+          <div class="input-container">
+						<div class="prompt-text">Age</div>
+					</div>
+	      </div>
+
+	      <div class="col-xs-5 col-height">
+  				<div class="slider pull-right" id="1"></div>
+					<script>
+			        $(".slider#1").slider({
+			        	value: 20,
+				        min: 20,
+				        max: 100
+				    })
+					</script>
+	      </div>
+	      
+	     </div>
 	  </div>
 
-	  <div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-text">Ethnicity</div>
-      <div class="col-xs-5 col-height no-padding">
-				<button class="btn btn-default dropdown-toggle pull-right vertical-center" type="button" 
-				id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">Select <span class="caret"></span>
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Ethnicity</span>
+			<div class="btn-group pull-right" role="group">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">Select
+					<span class="caret"></span>
 				 </button>
-			    <ul class="dropdown-menu dropdown-menu-right">
+
+			    <ul class="dropdown-menu">
 			      <li><a href="#">African American</a></li>
 			      <li><a href="#">Caucasian</a></li>
 			      <li><a href="#">Other</a></li>
 			    </ul>
-    	</div>
-	  </div>
+	    	</div>
+		</div>
 
-		<div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-text">Biological Sex</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Biological Sex</span>
+		  <span class="btn-group pull-right">
 		    <button type="button" class="btn btn-default">Male</button>
 		    <button type="button" class="btn btn-default">Female</button>
 		  </span>
-      </div>
-	  </div>
+		</div>
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-text">Total Cholesterol</div>
-      <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="2"></div>
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Total Cholesterol</span>
+			<div class="btn-group pull-right">
+				<div class="slider-container">
+				<div class="slider" id="2"></div>
 				<script>
 			        $(".slider#2").slider({
 			        	value: 130,
@@ -105,13 +113,14 @@
 				        max: 320
 			        })
 				</script>
-      </div>
-	  </div>
+				</div>
+			</div>
+		</div>
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-text">HDL Cholesterol</div>
-      <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="3"></div>
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">HDL Cholesterol</span>
+			<div class="btn-group pull-right">
+				<div class="slider" id="3"></div>
 				<script>
 			        $(".slider#3").slider({
 			        	value: 20,
@@ -119,13 +128,13 @@
 				        max: 100
 			        })
 				</script>
-      </div>
-	  </div>
+			</div>
+		</div>
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-text">Systolic Blood Pressure</div>
-      <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="4"></div>
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Systolic Blood Pressure</span>
+			<div class="btn-group pull-right">
+				<div class="slider" id="4"></div>
 				<script>
 			        $(".slider#4").slider({
 			        	value: 90,
@@ -133,43 +142,35 @@
 				        max: 200
 			        })
 				</script>
-      </div>
-	  </div>
+			</div>
+		</div>
 
-		<div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-text">Treated for Hypertension?</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Treated for Hypertension?</span>
+		  <span class="btn-group pull-right">
 		    <button type="button" class="btn btn-default">Yes</button>
 		    <button type="button" class="btn btn-default">No</button>
 		  </span>
-      </div>
-	  </div>
+		</div>
 
-		<div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-text">Smoker?</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Smoker?</span>
+		  <span class="btn-group pull-right">
 		    <button type="button" class="btn btn-default">Yes</button>
 		    <button type="button" class="btn btn-default">No</button>
 		  </span>
-      </div>
-	  </div>
+		</div>
 
-		<div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-text">Diabetes?</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
+		<div class="btn-toolbar spaced-bar">
+			<span class="btn-group text">Diabetes?</span>
+		  <span class="btn-group pull-right">
 		    <button type="button" class="btn btn-default">Yes</button>
 		    <button type="button" class="btn btn-default">No</button>
 		  </span>
-      </div>
-	  </div>
-
+		</div>
 		<script>$(".slider").slider().slider("float");</script>
 
-		<br>
-		<div class="btn-group no-space btn-group-justified no-margin" role="group" aria-label="...">
+		<div class="btn-group no-space btn-group-justified" role="group" aria-label="...">
 		    <div class="btn-group" role="group">
 		      <a href="#" class="btn btn-default">Submit</a>
 		    </div>
