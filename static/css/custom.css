@@ -11,10 +11,21 @@
 	}
 }
 
-
+/*
 .prompt-text {
-	font-size: 16px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.new-text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+*/
+.prompt-text {
 	line-height: 50px;
+	font-size: 16px;
 }
 .col-height {
 	height: 50px;
