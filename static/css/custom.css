@@ -2,30 +2,32 @@
 	.container {
 		max-width: 600px;
 	}
-	.prompt-text {
-		font-size: 22px;
-		line-height: 50px;
-	}
 	.col-height {
 	height: 50px;
 	}
 }
-
-/*
-.prompt-text {
-  height: 100px;
-  line-height: 100px;
-  text-align: center;
+.prompt-container {
+  height: 50px;
+  height: 100%;
 }
-.new-text {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
-}
-*/
 .prompt-text {
-	line-height: 50px;
-	font-size: 16px;
+	word-wrap: normal;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: left;
+  justify-content: left;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 .col-height {
 	height: 50px;
