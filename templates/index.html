@@ -53,147 +53,164 @@
 
 <div class = "container body-container">
 	<body>
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Age</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="1"></div>
-				<script>
-		        $(".slider#1").slider({
-		        	value: 20,
-			        min: 20,
-			        max: 100
-			    })
-				</script>
-      </div>
-	  </div>
+    <form role="form" method="POST" action=".">
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Ethnicity</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-				<button class="btn btn-default dropdown-toggle pull-right vertical-center" type="button" 
-				id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">Select <span class="caret"></span>
-				 </button>
-			    <ul class="dropdown-menu dropdown-menu-right">
-			      <li><a href="#">African American</a></li>
-			      <li><a href="#">Caucasian</a></li>
-			      <li><a href="#">Other</a></li>
-			    </ul>
-    	</div>
-	  </div>
-
-		<div class="row">
-	  	<div class="col-xs-5 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Biological Sex</span>
-  		</div>
-      <div class="col-xs-7 col-height no-padding">
-			  <div class="btn-group pull-right vertical-center">
-		    <button type="button" class="btn btn-default">Male</button>
-		    <button type="button" class="btn btn-default">Female</button>
-		  	</div>
-      </div>
-	  </div>
-
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Total Cholesterol</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="2"></div>
-				<script>
-			        $(".slider#2").slider({
-			        	value: 130,
-				        min: 130,
-				        max: 320
-			        })
-				</script>
-      </div>
-	  </div>
-
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">HDL Cholesterol</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="3"></div>
-				<script>
-			        $(".slider#3").slider({
+		  <div class="row">
+		  	<div class="col-xs-7 col-height no-padding prompt-container">
+		  		<span class="prompt-text">Age</span>
+	  		</div>
+	      <div class="col-xs-5 col-height no-padding">
+					<div class="slider pull-right vertical-center" id="1"></div>
+					<input type="hidden" name="slider1">
+					<script>
+			        $(".slider#1").slider({
 			        	value: 20,
 				        min: 20,
 				        max: 100
-			        })
-				</script>
-      </div>
-	  </div>
+				    })
+					</script>
+	      </div>
+		  </div>
 
-	  <div class="row">
+		  <div class="row">
+		  	<div class="col-xs-7 col-height no-padding prompt-container">
+		  		<span class="prompt-text">Ethnicity</span>
+	  		</div>
+	      <div class="col-xs-5 col-height no-padding">
+					<button class="btn btn-default dropdown-toggle pull-right vertical-center" type="button" 
+					id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">Select <span class="caret"></span>
+					 </button>
+				    <ul class="dropdown-menu dropdown-menu-right">
+				      <li><a href="#">African American</a></li>
+				      <li><a href="#">Caucasian</a></li>
+				      <li><a href="#">Other</a></li>
+				    </ul>
+	    	</div>
+		  </div>
+
+			<div class="row">
+		  	<div class="col-xs-5 col-height no-padding prompt-container">
+		  		<span class="prompt-text">Biological Sex</span>
+	  		</div>
+	      <div class="col-xs-7 col-height no-padding">
+				  <div class="btn-group pull-right vertical-center">
+			   		<button type="button" class="btn btn-default btn-left" id="sex" name="sex">Male</button>
+				    <button type="button" class="btn btn-default btn-right" id="sex" name="sex">Female</button>
+			  	</div>
+	      </div>
+		  </div>
+
+		  <div class="row">
+		  	<div class="col-xs-7 col-height no-padding prompt-container">
+		  		<span class="prompt-text">Total Cholesterol</span>
+	  		</div>
+	      <div class="col-xs-5 col-height no-padding">
+					<div class="slider pull-right vertical-center" id="2"></div>
+					<script>
+				        $(".slider#2").slider({
+				        	value: 130,
+					        min: 130,
+					        max: 320
+				        })
+					</script>
+	      </div>
+		  </div>
+
+		  <div class="row">
+		  	<div class="col-xs-7 col-height no-padding prompt-container">
+		  		<span class="prompt-text">HDL Cholesterol</span>
+	  		</div>
+	      <div class="col-xs-5 col-height no-padding">
+					<div class="slider pull-right vertical-center" id="3"></div>
+					<script>
+				        $(".slider#3").slider({
+				        	value: 20,
+					        min: 20,
+					        max: 100
+				        })
+					</script>
+	      </div>
+		  </div>
+
+		  <div class="row">
+		  	<div class="col-xs-7 col-height no-padding prompt-container">
+		  		<span class="prompt-text">Systolic Blood Pressure</span>
+	  		</div>
+	      <div class="col-xs-5 col-height no-padding">
+					<div class="slider pull-right vertical-center" id="4"></div>
+					<script>
+				        $(".slider#4").slider({
+				        	value: 90,
+					        min: 90,
+					        max: 200
+				        })
+					</script>
+	      </div>
+		  </div>
+
+			<div class="row">
 	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Systolic Blood Pressure</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="4"></div>
-				<script>
-			        $(".slider#4").slider({
-			        	value: 90,
-				        min: 90,
-				        max: 200
-			        })
-				</script>
-      </div>
-	  </div>
+		  		<span class="prompt-text">Treatment For Hypertension?</span>
+			</div>
+	      <div class="col-xs-5 col-height no-padding">
+				  <span class="btn-group pull-right vertical-center">
+  			    <button type="button" class="btn btn-default btn-left" id="bp-rx" name="bp-rx">Yes</button>
+			    	<button type="button" class="btn btn-default btn-right" id="bp-rx" name="bp-rx">No</button>
+			 		</span>
+	      </div>
+		  </div>
 
-		<div class="row">
-  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Treatment For Hypertension?</span>
-		</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
-		    <button type="button" class="btn btn-default">Yes</button>
-		    <button type="button" class="btn btn-default">No</button>
-		  </span>
-      </div>
-	  </div>
+			<div class="row">
+	      <div class="col-xs-7 col-height no-padding prompt-container">
+		  		<span class="prompt-text">Smoker?</span>
+	  		</div>
+	      <div class="col-xs-5 col-height no-padding">
+				  <span class="btn-group pull-right vertical-center">
+				    <button type="button" class="btn btn-default btn-left" id="smoke" name="smoke">Yes</button>
+			    	<button type="button" class="btn btn-default btn-right" id="smoke" name="smoker">No</button>
+			 	 </span>
+	      </div>
+		  </div>
 
-		<div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Smoker?</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
-		    <button type="button" class="btn btn-default">Yes</button>
-		    <button type="button" class="btn btn-default">No</button>
-		  </span>
-      </div>
-	  </div>
+			<div class="row">
+	      <div class="col-xs-7 col-height no-padding prompt-container">
+		  		<span class="prompt-text">Diabetes?</span>
+	  		</div>
+	      <div class="col-xs-5 col-height no-padding">
+				  <span class="btn-group pull-right vertical-center">
+				    <button type="button" class="btn btn-default btn-left" id="diabetes" name="diabetes">Yes</button>
+			    	<button type="button" class="btn btn-default btn-right" id="diabetes" name="diabetes">No</button>
+			 	 </span>
+	      </div>
+		  </div>
 
-		<div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Diabetes?</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
-		    <button type="button" class="btn btn-default">Yes</button>
-		    <button type="button" class="btn btn-default">No</button>
-		  </span>
-      </div>
-	  </div>
+			<script>$(".slider").slider().slider("float");</script>
 
-		<script>$(".slider").slider().slider("float");</script>
+			<!-- Responsive button press -->
+	    <script>
+	    	$('.btn-left').click(function() {
+		  		$(this).attr('class', 'btn btn-default btn-left active');
+		  		right_button = '.btn-right#'.concat(this.id)
+		  		$(right_button).attr('class', 'btn btn-default btn-right');
+				});
+	    	$('.btn-right').click(function() {
+		  		$(this).attr('class', 'btn btn-default btn-right active');
+		  		left_button = '.btn-left#'.concat(this.id)
+		  		$(left_button).attr('class', 'btn btn-default btn-left');
+				});
+	    </script>
+			<br>
+			<div class="btn-group no-space btn-group-justified no-margin" role="group" aria-label="...">
+			    <div class="btn-group" role="group">
+			      <input class="btn btn-default" type="submit" name="submit" value="Submit">
+			    </div>
+			</div>
 
-		<br>
-		<div class="btn-group no-space btn-group-justified no-margin" role="group" aria-label="...">
-		    <div class="btn-group" role="group">
-		      <a href="#" class="btn btn-default">Submit</a>
-		    </div>
-		</div>
-
-		<div>
-		<br>
-		<p class ="bottom-page-description">{{ description }} <a href="/about">About this app.</p>
-		</div>
+			<div>
+			<br>
+			<p class ="bottom-page-description">{{ description }} <a href="/about">About this app.</a></p>
+			</div>
+		</form>
 	</body>
 </div>
 <script type = "text/javascript" src = "/static/js/bootstrap.min.js"></script>
