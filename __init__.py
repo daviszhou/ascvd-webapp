@@ -4,7 +4,7 @@ from flask import Flask, render_template, url_for, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/', methods = ['GET', 'POST'])
+@app.route('/',)
 def homepage():
 	viewer = 'clinician'
 	description = 'This is the clinician version.'
@@ -19,10 +19,10 @@ def patientpage():
 
 	return render_template('index.html', viewer=viewer, description=description)
 
-@app.route('/echo/', methods=['GET'])
+@app.route('/echo/', methods=['POST'])
 def echo():
-    ret_data = {"value": request.args.get('echoValue')}
-    return jsonify(ret_data)
+    return_data = {"value": request.json['echoValue']}
+    return jsonify(return_data)
 
 @app.route('/about')
 def aboutpage():

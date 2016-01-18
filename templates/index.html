@@ -67,12 +67,12 @@
 					<div class="slider pull-right vertical-center" id="1">
 						<input type="hidden" name="slider1">
 						<script>
+							var sliderValue = 20
 			        $(".slider#1").slider({
 			        	value: 20,
 				        min: 20,
 				        max: 100,
 				        slide: updateSliderValue,
-				        create: updateSliderValue,
 				    	})
 				    	function updateSliderValue(event, ui) {
 					      return sliderValue = ui.value;
@@ -216,10 +216,10 @@
 			  $(function() {
 			    $("#submit-button").click(function() {
 			         $.ajax({
-			            type: "GET",
+			            type: "POST",
 			            url: $SCRIPT_ROOT + "/echo/",
 			            contentType: "application/json; charset=utf-8",
-			            data: { echoValue: sliderValue },
+			            data: JSON.stringify({ echoValue: sliderValue }),
 			            success: function updateData(data) {
 			                $('#echoResult').text(data.value);
 			            }
