@@ -189,8 +189,27 @@
       </div>
 	  </div>
 
-	  <!-- Add floating labels to sliders -->
-	  <script>$(".slider").slider().slider("float");</script>
+	  <script>
+	  //Add floating labels to sliders
+	  $(".slider").slider().slider("float");
+
+	  //Allow slider dragging on mobile devices
+		$('#widget').draggable();
+		</script>
+
+		<script>
+		//Responsive button press
+		$('.btn-left').click(function() {
+			$(this).attr('class', 'btn btn-default btn-left active');
+			right_button = '.btn-right#'.concat(this.id);
+			$(right_button).attr('class', 'btn btn-default btn-right');
+			});
+		$('.btn-right').click(function() {
+			$(this).attr('class', 'btn btn-default btn-right active');
+			left_button = '.btn-left#'.concat(this.id);
+			$(left_button).attr('class', 'btn btn-default btn-left');
+		});
+		</script>
 
 		<br>
 		<!-- Ajax output -->
@@ -221,6 +240,5 @@
 	</body>
 </div>
 <script type = "text/javascript" src = "/static/js/bootstrap.min.js"></script>
-<script type = "text/javascript" src = "/static/js/custom.js"></script>
 
 </html>
