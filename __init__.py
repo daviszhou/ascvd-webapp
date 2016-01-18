@@ -21,7 +21,7 @@ def patientpage():
 
 @app.route('/echo/', methods=['POST'])
 def echo():
-    return_data = {"value": request.json['echoValue']}
+    return_data = {"value": request.json['userInputs']}
     return jsonify(return_data)
 
 @app.route('/about')

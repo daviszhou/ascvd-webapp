@@ -60,20 +60,19 @@
 	  		<span class="prompt-text">Age</span>
   		</div>
       <div class="col-xs-5 col-height no-padding">
-				<div class="slider pull-right vertical-center" id="1">
-					<script>
-						var sliderValue = 20
-		        $(".slider#1").slider({
-		        	value: 20,
-			        min: 20,
-			        max: 100,
-			        slide: updateSliderValue
-			    	})
-			    	function updateSliderValue(event, ui) {
-				      return sliderValue = ui.value;
-				    };
-					</script>
-				</div>
+				<div class="slider pull-right vertical-center" id="1"></div>
+				<script>
+					var sliderValueAge = 20;
+	        $(".slider#1").slider({
+	        	value: 20,
+		        min: 20,
+		        max: 100,
+		        slide: updateSliderValue
+		    	})
+		    	function updateSliderValue(event, ui) {
+			      return sliderValueAge = ui.value;
+			    };
+				</script>
       </div>
 	  </div>
 
@@ -112,11 +111,16 @@
       <div class="col-xs-5 col-height no-padding">
 				<div class="slider pull-right vertical-center" id="2"></div>
 				<script>
-			        $(".slider#2").slider({
-			        	value: 130,
-				        min: 130,
-				        max: 320
-			        })
+					var sliderValueTC = 130;
+	        $(".slider#2").slider({
+	        	value: 130,
+		        min: 130,
+		        max: 320,
+		        slide: updateSliderValue
+	        })
+	        function updateSliderValue(event, ui) {
+			      return sliderValueTC = ui.value;
+			    };
 				</script>
       </div>
 	  </div>
@@ -128,11 +132,16 @@
       <div class="col-xs-5 col-height no-padding">
 				<div class="slider pull-right vertical-center" id="3"></div>
 				<script>
-			        $(".slider#3").slider({
-			        	value: 20,
-				        min: 20,
-				        max: 100
-			        })
+					var sliderValueHDL = 20;
+	        $(".slider#3").slider({
+	        	value: 20,
+		        min: 20,
+		        max: 100,
+						slide: updateSliderValue
+	        })
+	        function updateSliderValue(event, ui) {
+			      return sliderValueHDL = ui.value;
+			    };
 				</script>
       </div>
 	  </div>
@@ -144,11 +153,16 @@
       <div class="col-xs-5 col-height no-padding">
 				<div class="slider pull-right vertical-center" id="4"></div>
 				<script>
-			        $(".slider#4").slider({
-			        	value: 90,
-				        min: 90,
-				        max: 200
-			        })
+					var sliderValueBP = 130;
+	        $(".slider#4").slider({
+	        	value: 90,
+		        min: 90,
+		        max: 200,
+		        slide: updateSliderValue
+	        })
+	        function updateSliderValue(event, ui) {
+			      return sliderValueBP = ui.value;
+			    };
 				</script>
       </div>
 	  </div>
@@ -220,13 +234,14 @@
 		$(".slider").slider().slider("float");
 		  $(function() {
 		    $("#submit-button").click(function() {
+		    	inputValues = [sliderValueAge, sliderValueTC, sliderValueHDL, sliderValueBP]
 	        $.ajax({
             type: "POST",
             url: $SCRIPT_ROOT + "/echo/",
             contentType: "application/json; charset=utf-8",
-            data: JSON.stringify({ echoValue: sliderValue }),
+            data: JSON.stringify({ userInputs:inputValues }),
             success: function updateData(data) {
-                $('#input_result').text(data.value);
+                $('#input_result').text(data.value.toString());
             }
 	        });
 		    });
