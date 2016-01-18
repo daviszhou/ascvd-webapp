@@ -1,8 +1,8 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!--android launcher icon-->
@@ -35,179 +35,187 @@
 <body class = "body">
 
 	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	    <p class="navbar-text">ASCVD Risk Estimator</p>
-	  </div>
+		<div class="container-fluid">
+			<div class="navbar-header">
+			<p class="navbar-text">ASCVD Risk Estimator</p>
+		</div>
 	</nav>
 	{% if viewer == 'clinician' %}
 	<div class="btn-group no-space btn-group-justified" role="group" aria-label="...">
-    <a href="#" class="btn btn-default active">Clinician Version</a>
-    <a href="/patient" class="btn btn-default"> Patient Version </a>
+		<a href="#" class="btn btn-default active">Clinician Version</a>
+		<a href="/patient" class="btn btn-default"> Patient Version </a>
 	</div>
 	{% elif viewer == 'patient' %}
 	<div class="btn-group no-space btn-group-justified" role="group" aria-label="...">
-    <a href="/" class="btn btn-default">Clinician Version</a>
-    <a href="#" class="btn btn-default active"> Patient Version </a>
-  </div>
+		<a href="/" class="btn btn-default">Clinician Version</a>
+		<a href="#" class="btn btn-default active"> Patient Version </a>
+	</div>
 	{% endif %}
 
 <div class = "container body-container">
 	<body>
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Age</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
+		<div class="row">
+			<div class="col-xs-7 col-height no-padding prompt-container">
+				<span class="prompt-text">Age</span>
+			</div>
+			<div class="col-xs-5 col-height no-padding">
 				<div class="slider pull-right vertical-center" id="1"></div>
 				<script>
 					var sliderValueAge = 20;
-	        $(".slider#1").slider({
-	        	value: 20,
-		        min: 20,
-		        max: 100,
-		        slide: updateSliderValue
-		    	})
-		    	function updateSliderValue(event, ui) {
-			      return sliderValueAge = ui.value;
-			    };
+					$(function() {
+						$(".slider#1").slider({
+							value: 20,
+							min: 20,
+							max: 100,
+							slide: updateSliderValue
+						});
+						function updateSliderValue(event, ui) {
+							return sliderValueAge = ui.value;
+						}
+					});
 				</script>
-      </div>
-	  </div>
+			</div>
+		</div>
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Ethnicity</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
+		<div class="row">
+			<div class="col-xs-7 col-height no-padding prompt-container">
+				<span class="prompt-text">Ethnicity</span>
+			</div>
+			<div class="col-xs-5 col-height no-padding">
 				<button class="btn btn-default dropdown-toggle pull-right vertical-center" type="button" 
 				id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">Select <span class="caret"></span>
 				 </button>
-			    <ul class="dropdown-menu dropdown-menu-right">
-			      <li><a href="#">African American</a></li>
-			      <li><a href="#">Caucasian</a></li>
-			      <li><a href="#">Other</a></li>
-			    </ul>
-    	</div>
-	  </div>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">African American</a></li>
+						<li><a href="#">Caucasian</a></li>
+						<li><a href="#">Other</a></li>
+					</ul>
+			</div>
+		</div>
 
 		<div class="row">
-	  	<div class="col-xs-5 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Biological Sex</span>
-  		</div>
-      <div class="col-xs-7 col-height no-padding">
-			  <div class="btn-group pull-right vertical-center">
-		   		<button type="button" class="btn btn-default btn-left" id="sex" name="sex">Male</button>
-			    <button type="button" class="btn btn-default btn-right" id="sex" name="sex">Female</button>
-		  	</div>
-      </div>
-	  </div>
+			<div class="col-xs-5 col-height no-padding prompt-container">
+				<span class="prompt-text">Biological Sex</span>
+			</div>
+			<div class="col-xs-7 col-height no-padding">
+				<div class="btn-group pull-right vertical-center">
+			 		<button type="button" class="btn btn-default btn-left" id="sex" name="sex">Male</button>
+					<button type="button" class="btn btn-default btn-right" id="sex" name="sex">Female</button>
+				</div>
+			</div>
+		</div>
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Total Cholesterol</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
+		<div class="row">
+			<div class="col-xs-7 col-height no-padding prompt-container">
+				<span class="prompt-text">Total Cholesterol</span>
+			</div>
+			<div class="col-xs-5 col-height no-padding">
 				<div class="slider pull-right vertical-center" id="2"></div>
 				<script>
 					var sliderValueTC = 130;
-	        $(".slider#2").slider({
-	        	value: 130,
-		        min: 130,
-		        max: 320,
-		        slide: updateSliderValue
-	        })
-	        function updateSliderValue(event, ui) {
-			      return sliderValueTC = ui.value;
-			    };
+					$(function() {
+						$(".slider#2").slider({
+							value: 130,
+							min: 130,
+							max: 320,
+							slide: updateSliderValue
+						});
+						function updateSliderValue(event, ui) {
+							return sliderValueTC = ui.value;
+						}
+					});
 				</script>
-      </div>
-	  </div>
+			</div>
+		</div>
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">HDL Cholesterol</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
+		<div class="row">
+			<div class="col-xs-7 col-height no-padding prompt-container">
+				<span class="prompt-text">HDL Cholesterol</span>
+			</div>
+			<div class="col-xs-5 col-height no-padding">
 				<div class="slider pull-right vertical-center" id="3"></div>
 				<script>
 					var sliderValueHDL = 20;
-	        $(".slider#3").slider({
-	        	value: 20,
-		        min: 20,
-		        max: 100,
-						slide: updateSliderValue
-	        })
-	        function updateSliderValue(event, ui) {
-			      return sliderValueHDL = ui.value;
-			    };
+					$(function() {
+						$(".slider#3").slider({
+							value: 20,
+							min: 20,
+							max: 100,
+							slide: updateSliderValue
+						});
+						function updateSliderValue(event, ui) {
+							return sliderValueHDL = ui.value;
+						}
+					});
 				</script>
-      </div>
-	  </div>
+			</div>
+		</div>
 
-	  <div class="row">
-	  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Systolic Blood Pressure</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
+		<div class="row">
+			<div class="col-xs-7 col-height no-padding prompt-container">
+				<span class="prompt-text">Systolic Blood Pressure</span>
+			</div>
+			<div class="col-xs-5 col-height no-padding">
 				<div class="slider pull-right vertical-center" id="4"></div>
 				<script>
 					var sliderValueBP = 130;
-	        $(".slider#4").slider({
-	        	value: 90,
-		        min: 90,
-		        max: 200,
-		        slide: updateSliderValue
-	        })
-	        function updateSliderValue(event, ui) {
-			      return sliderValueBP = ui.value;
-			    };
+					$(function() {
+						$(".slider#4").slider({
+							value: 90,
+							min: 90,
+							max: 200,
+							slide: updateSliderValue
+						});
+						function updateSliderValue(event, ui) {
+							return sliderValueBP = ui.value;
+						}
+					});
 				</script>
-      </div>
-	  </div>
-
-		<div class="row">
-  	<div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Treatment For Hypertension?</span>
+			</div>
 		</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
-			    <button type="button" class="btn btn-default btn-left" id="bp-rx" name="bp-rx">Yes</button>
-		    	<button type="button" class="btn btn-default btn-right" id="bp-rx" name="bp-rx">No</button>
+
+		<div class="row">
+		<div class="col-xs-7 col-height no-padding prompt-container">
+				<span class="prompt-text">Treatment For Hypertension?</span>
+		</div>
+			<div class="col-xs-5 col-height no-padding">
+				<span class="btn-group pull-right vertical-center">
+					<button type="button" class="btn btn-default btn-left" id="bp-rx" name="bp-rx">Yes</button>
+					<button type="button" class="btn btn-default btn-right" id="bp-rx" name="bp-rx">No</button>
 		 		</span>
-      </div>
-	  </div>
+			</div>
+		</div>
 
 		<div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Smoker?</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
-			    <button type="button" class="btn btn-default btn-left" id="smoke" name="smoke">Yes</button>
-		    	<button type="button" class="btn btn-default btn-right" id="smoke" name="smoker">No</button>
+			<div class="col-xs-7 col-height no-padding prompt-container">
+				<span class="prompt-text">Smoker?</span>
+			</div>
+			<div class="col-xs-5 col-height no-padding">
+				<span class="btn-group pull-right vertical-center">
+					<button type="button" class="btn btn-default btn-left" id="smoke" name="smoke">Yes</button>
+					<button type="button" class="btn btn-default btn-right" id="smoke" name="smoker">No</button>
 		 	 </span>
-      </div>
-	  </div>
+			</div>
+		</div>
 
 		<div class="row">
-      <div class="col-xs-7 col-height no-padding prompt-container">
-	  		<span class="prompt-text">Diabetes?</span>
-  		</div>
-      <div class="col-xs-5 col-height no-padding">
-			  <span class="btn-group pull-right vertical-center">
-			    <button type="button" class="btn btn-default btn-left" id="diabetes" name="diabetes">Yes</button>
-		    	<button type="button" class="btn btn-default btn-right" id="diabetes" name="diabetes">No</button>
+			<div class="col-xs-7 col-height no-padding prompt-container">
+				<span class="prompt-text">Diabetes?</span>
+			</div>
+			<div class="col-xs-5 col-height no-padding">
+				<span class="btn-group pull-right vertical-center">
+					<button type="button" class="btn btn-default btn-left" id="diabetes" name="diabetes">Yes</button>
+					<button type="button" class="btn btn-default btn-right" id="diabetes" name="diabetes">No</button>
 		 	 </span>
-      </div>
-	  </div>
+			</div>
+		</div>
 
-	  <script>
-	  //Add floating labels to sliders
-	  $(".slider").slider().slider("float");
+		<script>
+		//Add floating labels to sliders
+		$(".slider").slider().slider("float");
 
-	  //Allow slider dragging on mobile devices
+		//Allow slider dragging on mobile devices
 		$('#widget').draggable();
 		</script>
 
@@ -231,21 +239,20 @@
 		<!-- Submit button -->
 		<button type="button" class="btn btn-default btn-group-justified" id="submit-button" name="submit-button">Submit</button>
 		<script>
-		$(".slider").slider().slider("float");
-		  $(function() {
-		    $("#submit-button").click(function() {
-		    	inputValues = [sliderValueAge, sliderValueTC, sliderValueHDL, sliderValueBP]
-	        $.ajax({
-            type: "POST",
-            url: $SCRIPT_ROOT + "/echo/",
-            contentType: "application/json; charset=utf-8",
-            data: JSON.stringify({ userInputs:inputValues }),
-            success: function updateData(data) {
-                $('#input_result').text(data.value.toString());
-            }
-	        });
-		    });
-		  });
+		$(function() {
+			$("#submit-button").click(function() {
+				inputValues = [sliderValueAge, sliderValueTC, sliderValueHDL, sliderValueBP];
+				$.ajax({
+					type: "POST",
+					url: $SCRIPT_ROOT + "/echo/",
+					contentType: "application/json; charset=utf-8",
+					data: JSON.stringify({ userInputs:inputValues }),
+					success: function updateData(data) { 
+						$('#input_result').text(data.value.toString());
+					}
+				});
+			});
+			});
 		</script>
 		<div>
 		<br>
