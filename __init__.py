@@ -1,10 +1,10 @@
 from __future__ import print_function
 import os
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def homepage():
 	viewer = 'clinician'
 	description = 'This is the clinician version.'
@@ -18,6 +18,11 @@ def patientpage():
 	description = 'This is the patient version.'
 
 	return render_template('index.html', viewer=viewer, description=description)
+
+@app.route('/echo/', methods=['GET'])
+def echo():
+    ret_data = {"value": request.args.get('echoValue')}
+    return jsonify(ret_data)
 
 @app.route('/about')
 def aboutpage():

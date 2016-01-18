@@ -27,8 +27,12 @@
 	<!-- Done -->
 	<script>$('#widget').draggable();</script>
 
+	<!-- get javascript root directory-->
+	<script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+
 	<link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="/static/css/custom.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body class = "body">
@@ -60,15 +64,21 @@
 		  		<span class="prompt-text">Age</span>
 	  		</div>
 	      <div class="col-xs-5 col-height no-padding">
-					<div class="slider pull-right vertical-center" id="1"></div>
-					<input type="hidden" name="slider1">
-					<script>
+					<div class="slider pull-right vertical-center" id="1">
+						<input type="hidden" name="slider1">
+						<script>
 			        $(".slider#1").slider({
 			        	value: 20,
 				        min: 20,
-				        max: 100
-				    })
-					</script>
+				        max: 100,
+				        slide: updateSliderValue,
+				        create: updateSliderValue,
+				    	})
+				    	function updateSliderValue(event, ui) {
+					      return sliderValue = ui.value;
+					    };
+						</script>
+					</div>
 	      </div>
 		  </div>
 
@@ -184,6 +194,7 @@
 	      </div>
 		  </div>
 
+		  <!-- Slider value overlay -->
 			<script>$(".slider").slider().slider("float");</script>
 
 			<!-- Responsive button press -->
@@ -199,10 +210,33 @@
 		  		$(left_button).attr('class', 'btn btn-default btn-left');
 				});
 	    </script>
+
 			<br>
+			<script>
+			  $(function() {
+			    $("#submit-button").click(function() {
+			         $.ajax({
+			            type: "GET",
+			            url: $SCRIPT_ROOT + "/echo/",
+			            contentType: "application/json; charset=utf-8",
+			            data: { echoValue: sliderValue },
+			            success: function updateData(data) {
+			                $('#echoResult').text(data.value);
+			            }
+			        });
+			    });
+			  });
+			</script>
+			<strong>Enter a value to echo back:</strong>
+			<input size="10" id="echoText" name="echoText" type="text">
+			<button type="button" id="submit-button" name="submit-button">Submit via AJAX</button><br><br>
+			<strong><div id="echoResult"></div></strong>
+
+			<!-- Submit button -->
 			<div class="btn-group no-space btn-group-justified no-margin" role="group" aria-label="...">
 			    <div class="btn-group" role="group">
-			      <input class="btn btn-default" type="submit" name="submit" value="Submit">
+			      <!--<input class="btn btn-default" type="submit" name="submit" value="Submit">-->
+			      <button type="button" class="btn btn-default" id="submit">Submit New</button>
 			    </div>
 			</div>
 
